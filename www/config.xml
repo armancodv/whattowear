@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.armanco.whattowear" version="1.0.1" >
-	<name>لیاس چی بپوشم؟</name>
+	<name>لباس چی بپوشم؟</name>
 	<description></description>
 	<author>armanco</author>
     <preference name="permissions"    		      value="none" />
