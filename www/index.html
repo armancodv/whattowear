@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport">
+<script src="angular.js" type="text/javascript"></script>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="script.js" type="text/javascript"></script>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+<div id="page1">
+	<table cellspacing="0" cellpadding="0" class="page-table">
+		<tr><td class="page-table-linebar"></td></tr>
+		<tr><td class="page-table-bar"></td></tr>
+		<tr><td class="page-table-header"><img src="pattern.png" style="opacity:0.4"></td></tr>
+		<tr><td class="page-table-main">
+			<a href="javascript:page(2);" ng-repeat="(number, page) in pages" ng-click="level1_func(number)"><table cellspacing="0" cellpadding="0" class="page-table-element"><tr><td>{{page}}</td></tr></table></a>
+			<a href="javascript:page(3);" ng-repeat="page in pages_type2"><table cellspacing="0" cellpadding="0" class="page-table-element"><tr><td>{{page}}</td></tr></table></a>
+		</td></tr>
+		<tr><td class="page-table-copy">&copy armanco</td></tr>
+	</table>
+</div>
+
+<div id="page2">
+	<table cellspacing="0" cellpadding="0" class="page-table">
+		<tr><td class="page-table-linebar"></td></tr>
+		<tr><td class="page-table-bar"><span class="bar-button" onclick="javascript:page(1);">خانه</span></td></tr>
+		<tr><td class="page-table-subbar">{{pages[level1_number]}}</td></tr>
+		<tr><td class="page-table-main">
+			<a href="javascript:page(4);" ng-repeat="element in page_elements[level1_number]" ng-click="level2_func(element)"><table cellspacing="0" cellpadding="0" class="page-table-element"><tr>
+			<td class="page-table-element-text">{{names[element]}}</td>
+			<td class="page-table-element-color"><table cellspacing="0" cellpadding="0" class="table-color" ng-repeat="color in colors[element]" style="background-color:#{{color}};"><tr><td></td></tr></table></td>
+			</tr></table></a>
+		</td></tr>
+		<tr><td class="page-table-copy">&copy armanco</td></tr>
+	</table>
+</div>
+
+<div id="page3">
+	<table cellspacing="0" cellpadding="0" class="page-table">
+		<tr><td class="page-table-linebar"></td></tr>
+		<tr><td class="page-table-bar"><span class="bar-button" onclick="javascript:page(1);">خانه</span></td></tr>
+		<tr><td class="page-table-subbar">{{pages_type2[0]}}</td></tr>
+		<tr><td class="page-table-data">مرحله اول: رنگ موی خود را انتخاب نمایید.</td></tr>
+		<tr><td class="page-table-main">
+			<a href="javascript:page(5);" ng-repeat="n in range(1,18)" ng-click="hair_func(n)"><table cellspacing="0" cellpadding="0" class="select-image" style="background-image:url('hair/{{n}}.jpg')"><tr><td></td></tr></table></a>
+		</td></tr>
+		<tr><td class="page-table-copy">&copy armanco</td></tr>
+	</table>
+</div>
+
+<div id="page4">
+	<table cellspacing="0" cellpadding="0" class="page-table">
+		<tr><td class="page-table-linebar"></td></tr>
+		<tr><td class="page-table-bar"><span class="bar-button" onclick="javascript:page(2);">بازگشت</span><span class="bar-button" onclick="javascript:page(1);">خانه</span></td></tr>
+		<tr><td class="page-table-subbar">{{names[level2_number]}}</td></tr>
+		<tr><td class="page-table-color">
+			<table cellspacing="0" cellpadding="0" class="table-color2" ng-repeat="color in colors[level2_number]" style="background-color:#{{color}};"><tr><td></td></tr></table>
+		</td></tr>
+		<tr><td class="page-table-data">{{data[level2_number]}}</td></tr>
+		<tr><td class="page-table-copy">&copy armanco</td></tr>
+	</table>
+</div>
+
+<div id="page5">
+	<table cellspacing="0" cellpadding="0" class="page-table">
+		<tr><td class="page-table-linebar"></td></tr>
+		<tr><td class="page-table-bar"><span class="bar-button" onclick="javascript:page(3);">بازگشت</span><span class="bar-button" onclick="javascript:page(1);">خانه</span></td></tr>
+		<tr><td class="page-table-subbar">{{pages_type2[0]}}</td></tr>
+		<tr><td class="page-table-data">مرحله دوم: رنگ چشم خود را انتخاب نمایید.</td></tr>
+		<tr><td class="page-table-main">
+			<a href="javascript:page(6);" ng-repeat="n in range(1,6)" ng-click="eye_func(n)"><table cellspacing="0" cellpadding="0" class="select-image" style="background-image:url('eye/{{n}}.jpg')"><tr><td></td></tr></table></a>
+		</td></tr>
+		<tr><td class="page-table-copy">&copy armanco</td></tr>
+	</table>
+</div>
+
+<div id="page6">
+	<table cellspacing="0" cellpadding="0" class="page-table">
+		<tr><td class="page-table-linebar"></td></tr>
+		<tr><td class="page-table-bar"><span class="bar-button" onclick="javascript:page(5);">بازگشت</span><span class="bar-button" onclick="javascript:page(1);">خانه</span></td></tr>
+		<tr><td class="page-table-subbar">{{pages_type2[0]}}</td></tr>
+		<tr><td class="page-table-color">
+			<table cellspacing="0" cellpadding="0" class="select-image" style="background-image:url('hair/{{hair_number}}.jpg')"><tr><td></td></tr></table>
+			<table cellspacing="0" cellpadding="0" class="select-image" style="background-image:url('eye/{{eye_number}}.jpg')"><tr><td></td></tr></table>
+		</td></tr>
+		<tr><td class="page-table-data">{{eye_dominant[hair_type[hair_number]][eye_type[eye_number]]}}</td></tr>
+		<tr><td class="page-table-copy">&copy armanco</td></tr>
+	</table>
+</div>
+
+</body>
+</html>
