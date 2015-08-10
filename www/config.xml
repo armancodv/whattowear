@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.armanco.whattowear" version="1.0.1" >
 	<name>لباس چی بپوشم؟</name>
-	<description></description>
+	<description>این برنامه به صورت تخصصی برای هر فرد پیشنهاد خاص خود را دارد تا بهترین ها را انتخاب کند.این برنامه دارای چهار بخش اصلی می باشد:پیام رنگ ها: بیانگر پیام مخابره شده توسط هر رنگ به شخص دیگر می باشد.رنگ فصل: با توجه به ویژگی های شما رنگ فصلتان را بهتان معرفی می کند.رنگ مو و چشم: بر اساس رنگ مو و چشمتان رنگ هایی را که مناسب شما هست بهتان معرفی می کند.مشاوره لباس: شامل دو مرحله ی انتخاب رنگ مو و مرحله ی رنگ چشم می باشد. سپس با توجه به رنگ غالبتان توصیه ای کامل برای نوع و رنگ لباس، کفش، مدل مو و جواهرات مناسب شما ارایه می دهد.</description>
 	<author>armanco</author>
     <preference name="permissions"    		      value="none" />
     <preference name="phonegap-version"           value="3.7.0" />          <!-- all: current version of PhoneGap -->

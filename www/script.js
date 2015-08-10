@@ -93,6 +93,11 @@ app.controller('myCtrl', function($scope) {
 
 	$scope.pages_type2 = ['مشاوره لباس'];
 
+	$scope.page_data = [];
+	$scope.page_data[0] = 'رنگ لباسی که می پوشید پیام هایی درباره شخصیت شما به دیگران مخابره می کند. در این قسمت به شرح پیام هایی که هر گروه از رنگها مخابره می کنند می پردازیم.';
+	$scope.page_data[1] = 'رنگ فصل خود را بشناسید!';
+	$scope.page_data[2] = 'با توجه به گزینه های زیر رنگ لباس خود را انتخاب کنید.';
+	
 	$scope.page_elements = [];
 	$scope.page_elements[0] = [0,1,2,3,4,5,6,7];
 	$scope.page_elements[1] = [8,9,10,11];
