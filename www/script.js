@@ -79,13 +79,13 @@ app.controller('myCtrl', function($scope) {
 	$scope.eye_type = [0,1,2,3,4,4,4];
 
 	$scope.eye_dominant = [];
-	$scope.eye_dominant[0] = ['','warm','warm','warm','warm'];
-	$scope.eye_dominant[1] = ['','clear','deep','deep','clear'];
-	$scope.eye_dominant[2] = ['','cool','cool','cool','cool'];
-	$scope.eye_dominant[3] = ['','deep','deep','soft','clear'];
-	$scope.eye_dominant[4] = ['','soft','soft','soft','light'];
-	$scope.eye_dominant[5] = ['','soft','soft','soft','light'];
-
+	$scope.eye_dominant[0] = ['',6,6,6,6];
+	$scope.eye_dominant[1] = ['',1,3,3,1];
+	$scope.eye_dominant[2] = ['',2,2,2,2];
+	$scope.eye_dominant[3] = ['',3,3,5,1];
+	$scope.eye_dominant[4] = ['',5,5,5,4];
+	$scope.eye_dominant[5] = ['',5,5,5,4];
+	
 	$scope.pages = [];
 	$scope.pages[0] = 'پیام رنگ ها';
 	$scope.pages[1] = 'رنگ فصل';
@@ -97,6 +97,8 @@ app.controller('myCtrl', function($scope) {
 	$scope.page_elements[0] = [0,1,2,3,4,5,6,7];
 	$scope.page_elements[1] = [8,9,10,11];
 	$scope.page_elements[2] = [12,13,14,15,16,17,18,19,20,21,22];
+	
+	$scope.show_d = [];
 	
 	$scope.level1_func = function(number) {  
 		$scope.level1_number = number;
@@ -112,14 +114,20 @@ app.controller('myCtrl', function($scope) {
 
 	$scope.eye_func = function(number) {  
 		$scope.eye_number = number;
+		$scope.dominant=$scope.eye_dominant[$scope.hair_type[$scope.hair_number]][$scope.eye_type[$scope.eye_number]];
+		for (var i = 1; i <= 6; i += 1) {
+			if(i===$scope.dominant) $scope.show_d[i]=true;
+			else $scope.show_d[i]=false;
+		}
 	}
 
-	$scope.range = function(min, max, step){
-    step = step || 1;
-    var input = [];
-    for (var i = min; i <= max; i += step) input.push(i);
-    return input;
-  };
+	$scope.range = function(min, max, step) {
+		step = step || 1;
+		var input = [];
+		for (var i = min; i <= max; i += step) input.push(i);
+		return input;
+	};
+  
 
 });
 

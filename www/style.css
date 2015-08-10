@@ -18,6 +18,7 @@ a {
 #page2, #page3, #page4, #page5, #page6 {
 	display:none;
 }
+
 .page-table {
 	width:100%;
 	background-color:#f8f8f8;
@@ -131,4 +132,5 @@ a {
 	color:#bbbbbb;
 	background-color:#f5f5f5;
 	padding-top:10px;
+	direction:ltr;
 }

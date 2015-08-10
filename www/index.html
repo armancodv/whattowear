@@ -7,6 +7,7 @@
 <script src="jquery.js" type="text/javascript"></script>
 <script src="script.js" type="text/javascript"></script>
 <link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
 
@@ -26,7 +27,7 @@
 <div id="page2">
 	<table cellspacing="0" cellpadding="0" class="page-table">
 		<tr><td class="page-table-linebar"></td></tr>
-		<tr><td class="page-table-bar"><span class="bar-button" onclick="javascript:page(1);">خانه</span></td></tr>
+		<tr><td class="page-table-bar"><span class="bar-button" onclick="javascript:page(1);"><i class="fa fa-home"></i></span></td></tr>
 		<tr><td class="page-table-subbar">{{pages[level1_number]}}</td></tr>
 		<tr><td class="page-table-main">
 			<a href="javascript:page(4);" ng-repeat="element in page_elements[level1_number]" ng-click="level2_func(element)"><table cellspacing="0" cellpadding="0" class="page-table-element"><tr>
@@ -41,7 +42,7 @@
 <div id="page3">
 	<table cellspacing="0" cellpadding="0" class="page-table">
 		<tr><td class="page-table-linebar"></td></tr>
-		<tr><td class="page-table-bar"><span class="bar-button" onclick="javascript:page(1);">خانه</span></td></tr>
+		<tr><td class="page-table-bar"><span class="bar-button" onclick="javascript:page(1);"><i class="fa fa-home"></i></span></td></tr>
 		<tr><td class="page-table-subbar">{{pages_type2[0]}}</td></tr>
 		<tr><td class="page-table-data">مرحله اول: رنگ موی خود را انتخاب نمایید.</td></tr>
 		<tr><td class="page-table-main">
@@ -54,7 +55,7 @@
 <div id="page4">
 	<table cellspacing="0" cellpadding="0" class="page-table">
 		<tr><td class="page-table-linebar"></td></tr>
-		<tr><td class="page-table-bar"><span class="bar-button" onclick="javascript:page(2);">بازگشت</span><span class="bar-button" onclick="javascript:page(1);">خانه</span></td></tr>
+		<tr><td class="page-table-bar"><span class="bar-button" onclick="javascript:page(2);"><i class="fa fa-arrow-left"></i></span><span class="bar-button" onclick="javascript:page(1);"><i class="fa fa-home"></i></span></td></tr>
 		<tr><td class="page-table-subbar">{{names[level2_number]}}</td></tr>
 		<tr><td class="page-table-color">
 			<table cellspacing="0" cellpadding="0" class="table-color2" ng-repeat="color in colors[level2_number]" style="background-color:#{{color}};"><tr><td></td></tr></table>
@@ -67,7 +68,7 @@
 <div id="page5">
 	<table cellspacing="0" cellpadding="0" class="page-table">
 		<tr><td class="page-table-linebar"></td></tr>
-		<tr><td class="page-table-bar"><span class="bar-button" onclick="javascript:page(3);">بازگشت</span><span class="bar-button" onclick="javascript:page(1);">خانه</span></td></tr>
+		<tr><td class="page-table-bar"><span class="bar-button" onclick="javascript:page(3);"><i class="fa fa-arrow-left"></i></span><span class="bar-button" onclick="javascript:page(1);"><i class="fa fa-home"></i></span></td></tr>
 		<tr><td class="page-table-subbar">{{pages_type2[0]}}</td></tr>
 		<tr><td class="page-table-data">مرحله دوم: رنگ چشم خود را انتخاب نمایید.</td></tr>
 		<tr><td class="page-table-main">
@@ -80,13 +81,104 @@
 <div id="page6">
 	<table cellspacing="0" cellpadding="0" class="page-table">
 		<tr><td class="page-table-linebar"></td></tr>
-		<tr><td class="page-table-bar"><span class="bar-button" onclick="javascript:page(5);">بازگشت</span><span class="bar-button" onclick="javascript:page(1);">خانه</span></td></tr>
+		<tr><td class="page-table-bar"><span class="bar-button" onclick="javascript:page(5);"><i class="fa fa-arrow-left"></i></span><span class="bar-button" onclick="javascript:page(1);"><i class="fa fa-home"></i></span></td></tr>
 		<tr><td class="page-table-subbar">{{pages_type2[0]}}</td></tr>
 		<tr><td class="page-table-color">
 			<table cellspacing="0" cellpadding="0" class="select-image" style="background-image:url('hair/{{hair_number}}.jpg')"><tr><td></td></tr></table>
 			<table cellspacing="0" cellpadding="0" class="select-image" style="background-image:url('eye/{{eye_number}}.jpg')"><tr><td></td></tr></table>
 		</td></tr>
-		<tr><td class="page-table-data">{{eye_dominant[hair_type[hair_number]][eye_type[eye_number]]}}</td></tr>
+		<tr><td class="page-table-data">
+<div id="d1" ng-show="show_d[1]">
+<b>رنگ غالب شما: سفید</b>
+<p>خانمی که پوستی سفید دارد، ویژگی های برجسته ای هم داراست که اغلب عجیب و غریب به نظر می رسند! اگر موهایی نسبتا تیره، چشم های روشن و پوستی سفید (تا گندمی) دارید، رنگ های روشن برای شما بهترین خواهند بود.</p>
+<p>تضاد شدید در رنگ های تیره و خیلی روشن پوست شما حتما شما را بی نظیر جلوه خواهد داد.</p>
+<p>اعتماد به نفس داشته باشید و رنگ های روشن بپوشید تا رنگ بندی طبیعی شما خود را بیشتر نشان دهد.</p>
+<p>میزان رنگ: رنگ های روشن</p>
+<p>جواهرات: نقره بهتر است اما طلای براق هم خوب است.</p>
+<p>بهترین رنگ های خنثی: سیاه، آبی سیر و خاکستری زغال سنگی</p>
+<p>رنگ های مکمل: بنفش کم رنگ، قرمز، زرد، صورتی</p>
+<p>سفید یا استخوانی؟! سفید</p>
+<p>بهترین رنگ کیف و کفش: سیاه</p>
+<p>بهترین رنگ برای ارایش: رنگ های شاد، بنفش و صورتی</p>
+<p>مشاوره مو: هر چه طبیعی تر بهتر! روشن پوست ها هیچ وقت موهایتان را کوتاه نکنید. سعی کنید از براق کننده برای افزایش درخشندگی موهای خود استفاده کنید.</p>
+</div>
+
+<div id="d2" ng-show="show_d[2]">
+<b>رنگ غالب شما: سرد</b>
+<p>اگر رنگ های سرد، رنگ غالب در ظاهر شماست سعی کنید از رنگ هایی مثل بنفش کم رنگ، یاقوتی کبود و ترکیب رنگ قلع و سرب استفاده کنید تا بهترین ظاهر را داشته باشید.</p>
+<p>لباس هایی با رنگ های خنثی بپوشید تا رنگ سرد شما بیشتر جلوه داشته باشد.</p>
+<p>رنگ سرد شما نیازمند سایه ایست که ته رنگ آبی داشته باشد. هیچ وقت لباس هایی با رنگ قهوه ای یا مات نپوشید چرا که باعث می شود رنگ پریده به نظر برسید. آبی سیر بهترین رنگ برای شماست.</p>
+<p>شدت رنگ: روشن تا نیمه روشن همراه با ته رنگ ابی یا صورتی</p>
+<p>جواهرات: نقره یا طلای سرخ (ترکیب طلا و مس)</p>
+<p>بهترین رنگ های خنثی: سیاه، آبی، خاکستری</p>
+<p>رنگ های مکمل: آبی اقیانوسی، بنفش درباری، سرخابی، صورتی کم رنگ</p>
+<p>سفید یا استخوانی؟! سفید</p>
+<p>بهترین رنگ کیف و کفش: سیاه یا زغالی</p>
+<p>بهترین رنگ برای آرایش: صورتی، قرمز، سیاه</p>
+<p>مشاوره مو: موهای طبیعی شما بهترین گزینه است، هیچوقت موهایتان را رنگ نکنید.</p>
+</div>
+		
+<div id="d3" ng-show="show_d[3]">
+<b>رنگ غالب شما: گندمی</b>
+<p>اگر رنگ پوست شما گندمی است، نیازمند سایه هایی از رنگ های زیبا خواهید بود! میتوانید این رنگ بندی را با رنگ های روشن جهت ایجاد تضاد استفاده کنید.</p>
+<p>از رنگ هایی با توناژ ضعیف دوری کنید! سایه های کم رنگ در طیف رنگی شما باعث می شود خسته و رنگ پریده به نظر برسید.</p>
+<p>به جای یک سایه کم رنگ صورتی، از بنفش پررنگ و سبز استفاده کنید.</p>
+<p>شدت رنگ: رنگ های تیره و نیمه روشن، بعضا روشن</p>
+<p>جواهرات: طلا و نقره</p>
+<p>بهترین رنگ های خنثی: سیاه یا قهوه ای تیره</p>
+<p>رنگ های مکمل: بنفش، قرمز، خرمالویی، آبی اقیانوسی</p>
+<p>سفید یا استخوانی؟! هر دو</p>
+<p>بهترین رنگ کیف و کفش: اگر رنگ موی شما قهوه ای نیمه روشن تا تیره است، برای کیف و کفش هم قهوه ای تیره استفاده کنید; اگر رنگ موش شما قهوه ای تیره و یا سیاه است، رنگ سیاه را انتخاب کنید.</p>
+<p>بهترین رنگ ها برای ارایش: قهوه ای، خثی، تمشکی</p>
+<p>مشاوره مو: مو های تیره طبیعی شما بهترین گزینه است بنابراین هایلایت های خیلی روشن استفاده نکنید. سایه های متوسط، کاراملی و شکلاتی بهترین رنگ برای شما هستند. هایلایت خود را در اطراف صورت خیلی کمرنگ استفاده کنید.</p>
+</div>
+		
+<div id="d4" ng-show="show_d[4]">
+<b>رنگ غالب شما: روشن</b>
+<p>خانمی که رنگ پوست او روشن است شکوهی طبیعی در ظاهر خود دارد. به دلیل این ترکیب رنگ استخوانی، طیف زرد بهترین رنگ برای ارایش و لباس های این دسته افراد است.</p>
+<p>رنگ های روشن برای این افراد چندان مناسب نیستند. رنگ هایی مثل بنفش، آبی، زرد و سبز بهترین گزینه ها خواهند بود.</p>
+<p>شدت رنگ: کم رنگ تا رنگ های نیمه روشن</p>
+<p>جواهرات: طلا و نقره</p>
+<p>رنگ های خنثی: زغالی، آبی سیر، خردلی</p>
+<p>رنگ های مکمل: زغالی، آبی، یاسی، یاقوتی کبود</p>
+<p>سفید یا استخوانی؟! هر دو مورد</p>
+<p>بهترین رنگ کیف و کفش: چون موهای بلوند و یا سفید دارید قوانین کلی برای شما اعمال نمی شود ولی در عوض می توانید از رنگ های خردلی، خاکستری مایل به قهوه ای و یا زغالی استفاده کنید.</p>
+<p>بهترین رنگ ها برای ارایش: صورتی، سرخ، هلویی و یا رنگ های خنثی</p>
+<p>مشاوره مو: اگر میخواهید رنگ طبیعی موهای خود را جلوه ببخشید حتما موهایتان را هایلایت کنید. از یک رنگ برای تمام مو ها استفاده نکنید تا مصنوعی به نظر نرسد.</p>
+</div>
+
+<div id="d5" ng-show="show_d[5]">
+<b>رنگ غالب شما: ملایم</b>
+<p>اگر شما خانمی با ظاهر زیبا، ظریف و با لطافت هستید رنگ بندی شما نیازمند سایه هایی از رنگ های زیباست که می توانید با رنگ های روشن برای ایجاد تضاد و ترکیبی از رنگ های نیمه روشن بپوشید.</p>
+<p>سایه هایی از خردلی، خاکستری و قهوه ای نیمه روشن رنگ های مناسبی برای لباس ها، کت و یا دامن شما می باشند.</p>
+<p>طیف رنگ قرمز از نارنجی تا قرمز روشن، انتخاب بسیار مناسبی برای شماست.</p>
+<p>از رنگ های خیلی تیره و سنگین دوری کنید که باعث می شود مسن به نظر برسید.</p>
+<p>شدت رنگ: رنگ های نیمه روشن</p>
+<p>جواهرات: طلا و نقره</p>
+<p>بهترین رنگ های خنثی: زغالی، قهوه ای، نیمه روشن</p>
+<p>رنگ های مکمل: زرد، آبی سیر، مرجانی، سبز نعنایی</p>
+<p>سفید یا استخوانی؟! استخوانی</p>
+<p>بهترین رنگ کیف و کفش: قهوه ای نیمه روشن</p>
+<p>بهترین رنگ آرایش: رنگ های خنثی و قهوه ای با رگه هایی از صورتی یا هلویی</p>
+<p>مشاوره مو: هایلایت به شما می آید اما رنگ هایلایت خود را زیادی روشن و یا زیادی تیره انتخاب نکنید. رنگ های نیمه روشن همیشه برای شما بهترین اند! چندین سایه از هایلایت و رنگ های کم رنگ تر به شما ظاهری فوق العاده می بخشد. رنگ مسی هم به شرط اینکه به سمت رنگ های گرم مایل نباشد خوب است.</p>
+</div>
+
+<div id="d6" ng-show="show_d[6]">
+<b>رنگ غالب شما: گرم</b>
+<p>اگر رنگ های گرم رنگ غالب در ظاهر شماست تمام رنگ های پاییزی به شما می آید! کافیست در یک روز پاییزی به طبیعت نظری بیندازید و ایده های بی نظیری برای لباس های خود پیدا کنید.</p>
+<p>در بهار و تابستان هم می توانید از همین رنگ ها استفاده کنید ولی خیلی کم رنگ تر.</p>
+<p>همچنین انتخاب زرد و هلویی هم در این دو فصل مناسب اند.</p>
+<p>شدت رنگ: رنگ هایی با زمینه زرد، سایه های پاییزی</p>
+<p>جواهرات: طلا و یا ترکیب طلا و نقره</p>
+<p>بهترین رنگ های خنثی: هر ترکیبی از قهوه ای</p>
+<p>رنگ های مکمل: زنگاری، شکلاتی، مسی، فیروزه ای</p>
+<p>سفید یا استخوانی؟! استخوانی</p>
+<p>بهترین رنگ کیف و کفش: قهوه ای</p>
+<p>بهترین رنگ برای آرایش: قهوه ای، رنگ های خنثی، هلویی، مرجانی</p>
+<p>مشاوره مو: قرمزبهترین رنگ برای موهای شماست. اگر رنگ قرمز در حال کمرنگ شدن بود، هایلایت مسی به آن اضافه کنید تا دوباره جلا پیدا کند.</p>
+</div>
+
+		</td></tr>
 		<tr><td class="page-table-copy">&copy armanco</td></tr>
 	</table>
 </div>
