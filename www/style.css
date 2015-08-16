@@ -15,7 +15,7 @@ a {
 	text-decoration:none;
 }
 
-#page2, #page3, #page4, #page5, #page6 {
+#page2, #page3, #page4, #page5, #page6, #page7 {
 	display:none;
 }
 
@@ -133,4 +133,8 @@ a {
 	background-color:#f5f5f5;
 	padding-top:10px;
 	direction:ltr;
+}
+
+.reference {
+	color:#bbbbbb;
 }

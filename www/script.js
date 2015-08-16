@@ -137,7 +137,7 @@ app.controller('myCtrl', function($scope) {
 });
 
 function page(page_number) {
-	for(i=1;i<=6;i++) {
+	for(i=1;i<=7;i++) {
 		if(i===page_number) {
 			document.getElementById('page'+i).style.display='block';
 		} else {
